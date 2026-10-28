@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Quiet mountain lake at sunrise</title>
+  <desc id="desc">A warm sunrise over a mountain lake, pine trees and a small lakeside village.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e7b982"/><stop offset=".55" stop-color="#f4d9ae"/><stop offset="1" stop-color="#c5d4c4"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#8ca9a0"/><stop offset="1" stop-color="#547b76"/></linearGradient>
+    <linearGradient id="mount" x2="0" y2="1"><stop stop-color="#758b7b"/><stop offset="1" stop-color="#536d62"/></linearGradient>
+    <linearGradient id="front" x2="0" y2="1"><stop stop-color="#506d57"/><stop offset="1" stop-color="#263f35"/></linearGradient>
+  </defs>
+  <rect width="1400" height="1000" fill="url(#sky)"/>
+  <circle cx="1020" cy="245" r="105" fill="#f8e5b7" opacity=".86"/>
+  <path d="M0 500 202 293l115 114 221-268 265 315 198-214 399 294v178H0Z" fill="#a6b6a0"/>
+  <path d="m422 252 116-113 107 128-61-26-45 15-39-20-38 18Z" fill="#e8e7d5" opacity=".88"/>
+  <path d="m929 302 72-62 102 97-62-24-31 16-43-20-20 9Z" fill="#e8e7d5" opacity=".82"/>
+  <path d="M0 532 180 380l131 134 208-195 176 206 195-180 151 151 142-110 217 173v158H0Z" fill="url(#mount)"/>
+  <path d="M0 545q260-35 480 3t463 0q230-28 457 9v443H0Z" fill="url(#water)"/>
+  <path d="M0 569q230-21 462 5t490-1q230-21 448 6" fill="none" stroke="#d9d5bd" stroke-width="8" opacity=".6"/>
+  <path d="M742 600q110 20 200 2t230 6" fill="none" stroke="#d8c39b" stroke-width="12" opacity=".55"/>
+  <path d="M0 657q100-78 216-21l71 44q90-50 176-13l114 45q98-31 170 23 102-65 208-12l99 48q88-44 177-11l169 60v180H0Z" fill="#6d8a70"/>
+  <path d="M0 754q166-84 284-24 107-61 208 9 116-69 234 16 102-55 220 8 122-57 239 7 107-56 215 2v228H0Z" fill="url(#front)"/>
+  <g fill="#334d3d">
+    <path d="m118 813 49-136 50 136h-26l45 99H98l44-99Zm1058-43 60-164 62 164h-32l56 122h-173l55-122Zm-906 55 35-98 37 98h-20l34 75h-100l34-75Zm680-7 43-119 44 119h-23l39 86h-120l40-86Z"/>
+  </g>
+  <g fill="#f4e8d1" stroke="#b98e61" stroke-width="7" stroke-linejoin="round">
+    <path d="m896 615 48-42 48 42v57h-96Z"/><path d="m1012 631 39-33 38 33v46h-77Z"/>
+  </g>
+  <g fill="#9c6849"><path d="m882 617 62-54 62 54-11 12-51-43-51 43Z"/><path d="m1000 632 51-44 51 44-9 11-42-35-42 35Z"/></g>
+  <g fill="#587760"><path d="m969 821 21-58 22 58h-12l20 45h-61l20-45Z"/><path d="m1061 830 26-73 27 73h-15l24 54h-72l24-54Z"/></g>
+  <path d="M0 930q160-40 320 0t320 0q160-40 320 0t440-3" fill="none" stroke="#c5b38f" stroke-width="4" opacity=".45"/>
+</svg>

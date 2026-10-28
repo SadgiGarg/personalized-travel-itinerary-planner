@@ -1,5 +1,5 @@
--- Initial persistence schema for future Supabase integration.
--- Review these policies before applying to a production Supabase project.
+-- Apply once in Supabase SQL Editor. The browser uses only the anon key;
+-- authenticated user JWTs and RLS policies restrict rows by auth.uid().
 create extension if not exists pgcrypto;
 
 create table if not exists public.trips (
@@ -17,7 +17,23 @@ create table if not exists public.trips (
   constraint trip_dates_valid check (end_date >= start_date)
 );
 create index if not exists trips_user_created_idx on public.trips (user_id, created_at desc);
+create or replace function public.set_trip_updated_at()
+returns trigger language plpgsql as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+drop trigger if exists trips_set_updated_at on public.trips;
+create trigger trips_set_updated_at before update on public.trips
+for each row execute function public.set_trip_updated_at();
 alter table public.trips enable row level security;
+revoke all on public.trips from anon, public;
+grant select, insert, update, delete on public.trips to authenticated;
+drop policy if exists "Users can read their own trips" on public.trips;
+drop policy if exists "Users can create their own trips" on public.trips;
+drop policy if exists "Users can update their own trips" on public.trips;
+drop policy if exists "Users can delete their own trips" on public.trips;
 create policy "Users can read their own trips" on public.trips for select to authenticated using (auth.uid() = user_id);
 create policy "Users can create their own trips" on public.trips for insert to authenticated with check (auth.uid() = user_id);
 create policy "Users can update their own trips" on public.trips for update to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);

@@ -16,9 +16,12 @@ pytest
 ```
 Frontend from `frontend/`:
 ```bash
-npm install
+npm ci
+npm test
 npm run build
 ```
+
+In Windows PowerShell, use `npm.cmd` for these commands if script execution policy blocks `npm.ps1`.
 
 ## Conventions
 - Keep HTTP and schema concerns out of generation services.
