@@ -1,7 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
-// Use Vite's same-origin /api proxy locally and the frontend origin in production
-// unless an explicit backend URL is configured.
+// Leave VITE_API_BASE_URL blank locally: relative /api requests go through Vite's
+// proxy to FastAPI at http://127.0.0.1:8000. For separate production hosting,
+// set it to the actual Render service URL so requests do not go to the Vercel origin.
 const env = import.meta.env || {};
 const API_BASE = (env.VITE_API_BASE_URL || "").trim().replace(/\/+$/, "");
 const SUPABASE_URL = (env.VITE_SUPABASE_URL || "").replace(/\/$/, "");
